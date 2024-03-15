@@ -1,7 +1,3 @@
-# RASH
+# Rusty-Old SHell
 
-The Toy Shell
-
-## Details
-
-Just for fun!
+Rusty-Old SHell is a toy shell!

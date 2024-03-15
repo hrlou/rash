@@ -1,7 +1,7 @@
-mod rash {
+mod rosh {
     use std::collections::HashMap;
     
-    pub fn rash() {
+    pub fn rosh() {
         let path_map = read_path().unwrap();
         let builtin_map = builtin().unwrap();
         loop {
@@ -12,7 +12,7 @@ mod rash {
                     let exec = builtin_map[&args[0]];
                     exec(args);
                 } else {
-                    eprintln!("rash: command not found: {}", &args[0])
+                    eprintln!("rosh: command not found: {}", &args[0])
                 }
             }
         }
@@ -32,7 +32,7 @@ mod rash {
     }
 
     pub fn prompt() {
-        let prompt = std::env::var("PS1").unwrap_or("rash> ".to_string());
+        let prompt = std::env::var("PS1").unwrap_or("rosh> ".to_string());
         eprint!("{}", prompt);
     }
 
@@ -81,5 +81,5 @@ mod rash {
 }
 
 fn main() {
-    rash::rash()
+    rosh::rosh()
 }
